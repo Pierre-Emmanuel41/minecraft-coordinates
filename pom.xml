@@ -29,8 +29,14 @@
 			<version>1.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
+		<dependency>
+			<groupId>fr.pederobien</groupId>
+			<artifactId>minecraft-chat</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
-	
+
 	<build>
 		<finalName>minecraft-coordinates</finalName>
 		<sourceDirectory>src/main/java</sourceDirectory>
