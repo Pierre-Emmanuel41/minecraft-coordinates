@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<name>Game</name>
+	<version>1.0</version>
+	<locales>
+		<locale>en</locale>
+		<locale>en-EN</locale>
+		<locale>en-GB</locale>
+		<locale>en-UK</locale>
+		<locale>en-US</locale>
+		<locale>en-CA</locale>
+	</locales>
+	<messages>
+		<message>
+			<code>COORDINATES__EXPLANATION</code>
+			<value>To display player's coordinates</value>
+		</message>
+		<message>
+			<code>COORDINATES__PLAYER_COORDS</code>
+			<value>My coordinates : %s</value>
+		</message>
+	</messages>
+</dictionary>

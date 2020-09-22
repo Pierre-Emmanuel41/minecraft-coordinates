@@ -1,0 +1,11 @@
+main: fr.pederobien.minecraftcoordinates.CoordinatesPlugin
+name: minecraft-coordinates
+version: 1.0-SNAPSHOT
+api-version: 1.13
+depend: [minecraft-chat]
+
+description:
+commands:
+  coord:
+    description: This command is used to display player's coordinates.
+    permission: true
