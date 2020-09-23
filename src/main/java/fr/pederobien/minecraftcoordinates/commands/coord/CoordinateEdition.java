@@ -19,9 +19,11 @@ import fr.pederobien.minecraftmanagers.MessageManager;
 import fr.pederobien.minecraftmanagers.PlayerManager;
 
 public class CoordinateEdition extends AbstractSimpleMapEdition {
+	private String pattern;
 
 	public CoordinateEdition() {
 		super("coord", ECoordinatesMessageCode.COORDINATES__EXPLANATION);
+		pattern = "<%s>";
 	}
 
 	@Override
@@ -36,7 +38,7 @@ public class CoordinateEdition extends AbstractSimpleMapEdition {
 			List<IChat> chats = chatConfiguration.getChats(player);
 			if (!chats.isEmpty()) {
 				for (IChat chat : chatConfiguration.getChats(player))
-					chat.sendMessage(player, getPlayerCoordinates(player));
+					chat.sendMessage(player, ECoordinatesMessageCode.COORDINATES__PLAYER_COORDS, getLoc(player));
 				return true;
 			}
 		}
@@ -47,17 +49,23 @@ public class CoordinateEdition extends AbstractSimpleMapEdition {
 			// Getting player's team
 			Optional<ITeam> optTeam = Plateform.getOrCreateConfigurationHelper(gameConfiguration).getTeam(player);
 			if (optTeam.isPresent()) {
-				optTeam.get().sendMessage(player, getPlayerCoordinates(player));
+				optTeam.get().sendMessage(player, ECoordinatesMessageCode.COORDINATES__PLAYER_COORDS, getLoc(player));
 				return true;
 			}
 		}
 
 		// Send the message to everyone
-		MessageManager.sendMessage(PlayerManager.getPlayers(), "<" + player.getName() + ">" + getPlayerCoordinates(player));
+		PlayerManager.getPlayers().forEach(p -> {
+			MessageManager.sendMessage(p, getPrefix(player) + getMessage(player, ECoordinatesMessageCode.COORDINATES__PLAYER_COORDS, getLoc(player)));
+		});
 		return true;
 	}
 
-	private String getPlayerCoordinates(Player player) {
-		return getMessage(player, ECoordinatesMessageCode.COORDINATES__PLAYER_COORDS, DisplayHelper.toString(player.getLocation(), false, true));
+	private String getLoc(Player player) {
+		return DisplayHelper.toString(player.getLocation(), false, true);
+	}
+
+	private String getPrefix(Player player) {
+		return String.format(pattern, player.getName());
 	}
 }
