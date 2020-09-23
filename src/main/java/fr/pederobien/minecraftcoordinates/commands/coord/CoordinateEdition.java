@@ -10,6 +10,7 @@ import org.bukkit.entity.Player;
 import fr.pederobien.minecraftchat.ChatPlugin;
 import fr.pederobien.minecraftchat.interfaces.IChat;
 import fr.pederobien.minecraftchat.interfaces.IChatConfiguration;
+import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
 import fr.pederobien.minecraftdevelopmenttoolkit.utils.DisplayHelper;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;
 import fr.pederobien.minecraftgameplateform.interfaces.element.IGameConfiguration;
