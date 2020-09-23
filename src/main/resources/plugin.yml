@@ -8,4 +8,9 @@ description:
 commands:
   coord:
     description: This command is used to display player's coordinates.
-    permission: true
+    permission: CoordinatesPlugin.permission
+    
+permissions:
+  CoordinatesPlugin.permission:
+    description: give access to command coord.
+    default: true
