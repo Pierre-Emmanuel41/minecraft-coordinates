@@ -34,7 +34,7 @@ public class CoordinateEdition extends AbstractSimpleMapEdition {
 		Player player = (Player) sender;
 
 		// Getting current chat configuration
-		IChatConfiguration chatConfiguration = ChatPlugin.getCurrentConfiguration();
+		IChatConfiguration chatConfiguration = ChatPlugin.getCurrentChatConfiguration();
 		if (chatConfiguration != null) {
 			List<IChat> chats = chatConfiguration.getChats(player);
 			if (!chats.isEmpty()) {
