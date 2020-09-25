@@ -1,6 +1,7 @@
 package fr.pederobien.minecraftcoordinates.commands.gps;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 import org.bukkit.entity.Player;
@@ -83,6 +84,13 @@ public class GpsMap {
 	 * @throws UnsupportedOperationException if the <tt>clear</tt> operation is not supported by this map
 	 */
 	public void clear() {
+		Iterator<Map<String, GpsEntry>> iterator0 = entries.values().iterator();
+		while (iterator0.hasNext()) {
+			Map<String, GpsEntry> gpsEntries = iterator0.next();
+			Iterator<GpsEntry> iterator1 = gpsEntries.values().iterator();
+			while (iterator1.hasNext())
+				iterator1.next().stop();
+		}
 		entries.clear();
 	}
 }
