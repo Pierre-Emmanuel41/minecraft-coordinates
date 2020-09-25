@@ -16,5 +16,49 @@
 			<code>COORDINATES__PLAYER_COORDS</code>
 			<value>Mes coordonnées : %s</value>
 		</message>
+		<message>
+			<code>GPS__EXPLANATION</code>
+			<value>Pour démarrer ou arrêter un GPS</value>
+		</message>
+		<message>
+			<code>NEW_GPS__GPS_ALREADY_REGISTERED</code>
+			<value>Le GPS %s existe déjà</value>
+		</message>
+		<message>
+			<code>GPS__NO_GAME_IS_RUNNING</code>
+			<value>Aucune partie n'est lancée</value>
+		</message>
+		<message>
+			<code>NEW_GPS__EXPLANATION</code>
+			<value>Ajoute dans le scoreboard du joueur une flèche indiquant la direction à suivre</value>
+		</message>
+		<message>
+			<code>NEW_GPS__SCOREBOARD_DISPLAY</code>
+			<value>GPS : </value>
+		</message>
+		<message>
+			<code>NEW_GPS__GPS_STARTED</code>
+			<value>Lancement du GPS pour aller en X=%s, Z=%s</value>
+		</message>
+		<message>
+			<code>NEW_GPS__PLAYER_ARRIVED</code>
+			<value>[GPS] Vous êtes arrivé</value>
+		</message>
+		<message>
+			<code>STOP_GPS__GPS_NOT_FOUND</code>
+			<value>Il n'y a aucun GPS enregistré à %s</value>
+		</message>
+		<message>
+			<code>STOP_GPS__NO_GPS_TO_STOP</code>
+			<value>Aucun GPS a arrêter</value>
+		</message>
+		<message>
+			<code>STOP_GPS__ONE_GPS_TO_STOP</code>
+			<value>Le GPS %s a été arrêter</value>
+		</message>
+		<message>
+			<code>STOP_GPS__SEVERAL_GPS_TO_STOP</code>
+			<value>Les GPS %s ont été arrêtés</value>
+		</message>
 	</messages>
 </dictionary>

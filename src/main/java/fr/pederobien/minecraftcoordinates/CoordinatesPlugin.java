@@ -8,6 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
 import fr.pederobien.minecraftcoordinates.commands.coord.CoordinatesCommand;
+import fr.pederobien.minecraftcoordinates.commands.gps.GpsCommand;
 import fr.pederobien.minecraftgameplateform.utils.Plateform;
 
 public class CoordinatesPlugin extends JavaPlugin {
@@ -26,6 +27,7 @@ public class CoordinatesPlugin extends JavaPlugin {
 		plugin = this;
 
 		new CoordinatesCommand(this);
+		new GpsCommand(this);
 
 		registerDictionaries();
 	}

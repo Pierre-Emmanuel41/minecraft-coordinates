@@ -9,6 +9,9 @@ commands:
   coord:
     description: This command is used to display player's coordinates.
     permission: CoordinatesPlugin.permission
+  gps:
+    description: This command is used to display a direction to follow
+    permission: CoordinatesPlugin.permission
     
 permissions:
   CoordinatesPlugin.permission:
