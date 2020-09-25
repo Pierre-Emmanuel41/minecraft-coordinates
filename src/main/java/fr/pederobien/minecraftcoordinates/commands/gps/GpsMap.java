@@ -76,4 +76,13 @@ public class GpsMap {
 	public Map<String, GpsEntry> get(Player player) {
 		return entries.get(player);
 	}
+
+	/**
+	 * Removes all of the mappings from this map (optional operation). The map will be empty after this call returns.
+	 *
+	 * @throws UnsupportedOperationException if the <tt>clear</tt> operation is not supported by this map
+	 */
+	public void clear() {
+		entries.clear();
+	}
 }
