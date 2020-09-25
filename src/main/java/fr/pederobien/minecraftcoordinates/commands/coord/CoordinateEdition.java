@@ -1,6 +1,5 @@
 package fr.pederobien.minecraftcoordinates.commands.coord;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.bukkit.Location;
@@ -8,9 +7,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftchat.ChatPlugin;
-import fr.pederobien.minecraftchat.interfaces.IChat;
-import fr.pederobien.minecraftchat.interfaces.IChatConfiguration;
 import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
 import fr.pederobien.minecraftdevelopmenttoolkit.utils.DisplayHelper;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;
@@ -33,17 +29,6 @@ public class CoordinateEdition extends AbstractSimpleMapEdition {
 		if (!(sender instanceof Player))
 			return false;
 		Player player = (Player) sender;
-
-		// Getting current chat configuration
-		IChatConfiguration chatConfiguration = ChatPlugin.getCurrentChatConfiguration();
-		if (chatConfiguration != null) {
-			List<IChat> chats = chatConfiguration.getChats(player);
-			if (!chats.isEmpty()) {
-				for (IChat chat : chatConfiguration.getChats(player))
-					chat.sendMessage(player, ECoordinatesMessageCode.COORDINATES__PLAYER_COORDS, getLoc(player));
-				return true;
-			}
-		}
 
 		// Getting current game configuration
 		IGameConfiguration gameConfiguration = Plateform.getGameConfigurationContext().getGameConfiguration();
