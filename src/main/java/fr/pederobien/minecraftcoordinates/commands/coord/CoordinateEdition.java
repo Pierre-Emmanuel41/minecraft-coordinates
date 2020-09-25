@@ -3,6 +3,7 @@ package fr.pederobien.minecraftcoordinates.commands.coord;
 import java.util.List;
 import java.util.Optional;
 
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -63,7 +64,10 @@ public class CoordinateEdition extends AbstractSimpleMapEdition {
 	}
 
 	private String getLoc(Player player) {
-		return DisplayHelper.toString(player.getLocation(), false, true);
+		Location loc = player.getLocation();
+		Location center = player.getWorld().getWorldBorder().getCenter();
+		Location display = new Location(player.getWorld(), loc.getBlockX() - center.getBlockX(), loc.getBlockY(), loc.getBlockZ() - center.getBlockZ());
+		return DisplayHelper.toString(display, false, true);
 	}
 
 	private String getPrefix(Player player) {
