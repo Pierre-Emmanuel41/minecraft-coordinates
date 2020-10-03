@@ -33,11 +33,12 @@ public class CoordinatesPlugin extends JavaPlugin {
 	}
 
 	private void registerDictionaries() {
+		String[] dictionaries = new String[] { "Coordinates.xml" };
 		// Registering French dictionaries
-		registerDictionary("French", "Coordinates.xml");
+		registerDictionary("French", dictionaries);
 
 		// Registering English dictionaries
-		registerDictionary("English", "Coordinates.xml");
+		registerDictionary("English", dictionaries);
 	}
 
 	private void registerDictionary(String parent, String... dictionaryNames) {
