@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 
 import fr.pederobien.minecraft.commandtree.impl.MinecraftCodeNode;
 import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryNotRegisteredException;
-import fr.pederobien.minecraft.game.GamePlugin;
+import fr.pederobien.minecraft.platform.GamePlatformPlugin;
 
 public class GpsRemoveNode extends MinecraftCodeNode {
 
@@ -17,7 +17,7 @@ public class GpsRemoveNode extends MinecraftCodeNode {
 	 * Creates a node in order to remove a GPS from the score board of a player.
 	 */
 	protected GpsRemoveNode() {
-		super("remove", ECoordinatesMessageCode.GPS__REMOVE__EXPLANATION, () -> GamePlugin.getGameTree().getGame() != null);
+		super("remove", ECoordinatesMessageCode.GPS__REMOVE__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override

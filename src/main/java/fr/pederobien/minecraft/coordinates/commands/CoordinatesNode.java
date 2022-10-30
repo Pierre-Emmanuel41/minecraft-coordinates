@@ -9,11 +9,11 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import fr.pederobien.minecraft.commandtree.impl.MinecraftCodeRootNode;
-import fr.pederobien.minecraft.game.GamePlugin;
 import fr.pederobien.minecraft.game.impl.DisplayHelper;
 import fr.pederobien.minecraft.game.interfaces.IGame;
 import fr.pederobien.minecraft.game.interfaces.ITeam;
 import fr.pederobien.minecraft.game.interfaces.ITeamConfigurable;
+import fr.pederobien.minecraft.platform.GamePlatformPlugin;
 
 public class CoordinatesNode extends MinecraftCodeRootNode {
 
@@ -21,7 +21,7 @@ public class CoordinatesNode extends MinecraftCodeRootNode {
 	 * Creates a node in order to display the coordinates the player running this command.
 	 */
 	public CoordinatesNode() {
-		super("coord", ECoordinatesMessageCode.COORD__EXPLANATION, () -> GamePlugin.getGameTree().getGame() != null);
+		super("coord", ECoordinatesMessageCode.COORD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override
@@ -36,7 +36,7 @@ public class CoordinatesNode extends MinecraftCodeRootNode {
 			return false;
 		}
 
-		IGame game = GamePlugin.getGameTree().getGame();
+		IGame game = GamePlatformPlugin.getGameTree().getGame();
 		Player player = (Player) sender;
 		Location loc = player.getLocation();
 		Location center = player.getWorld().getWorldBorder().getCenter();

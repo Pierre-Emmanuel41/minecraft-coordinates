@@ -15,9 +15,9 @@ import com.google.common.base.Predicate;
 import fr.pederobien.minecraft.commandtree.impl.MinecraftCodeNode;
 import fr.pederobien.minecraft.coordinates.CoordinatesPlugin;
 import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryAlreadyRegisteredException;
-import fr.pederobien.minecraft.game.GamePlugin;
 import fr.pederobien.minecraft.managers.ScoreboardManager;
 import fr.pederobien.minecraft.managers.WorldManager;
+import fr.pederobien.minecraft.platform.GamePlatformPlugin;
 import fr.pederobien.minecraft.platform.Platform;
 import fr.pederobien.minecraft.scoreboards.impl.Objective;
 import fr.pederobien.minecraft.scoreboards.interfaces.IObjective;
@@ -28,7 +28,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 	 * Creates a node in order to add a GPS to the score boards of a player.
 	 */
 	protected GpsAddNode() {
-		super("add", ECoordinatesMessageCode.GPS__ADD__EXPLANATION, () -> GamePlugin.getGameTree().getGame() != null);
+		super("add", ECoordinatesMessageCode.GPS__ADD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override

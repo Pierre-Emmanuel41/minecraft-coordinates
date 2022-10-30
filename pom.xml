@@ -5,34 +5,28 @@
 	<groupId>fr.pederobien.minecraft</groupId>
 	<artifactId>coordinates</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0_MC_1.13.2-SNAPSHOT</version>
+	<version>1.0_MC_1.16.5-SNAPSHOT</version>
 	<name>minecraft-coordinates</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
 		<author>Pierre-Emmanuel41</author>
 		<project.build.sourceEncoding>Cp1252</project.build.sourceEncoding>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.source>11</maven.compiler.source>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.spigotmc</groupId>
 			<artifactId>spigot-api</artifactId>
-			<version>1.13-R0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>fr.pederobien.minecraft</groupId>
-			<artifactId>game</artifactId>
-			<version>1.0_MC_1.13.2-SNAPSHOT</version>
+			<version>1.16.5-R0.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>fr.pederobien.minecraft</groupId>
 			<artifactId>platform</artifactId>
-			<version>1.0_MC_1.13.2-SNAPSHOT</version>
+			<version>1.0_MC_1.16.5-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
