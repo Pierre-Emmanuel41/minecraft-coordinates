@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionary>
+	<name>Game</name>
+	<version>1.0</version>
+	<locales>
+		<locale>fr</locale>
+		<locale>fr-FR</locale>
+		<locale>fr-CA</locale>
+	</locales>
+	<messages>
+		<message>
+			<code>COORD__EXPLANATION</code>
+			<value>Pour afficher less coordonnées d'un joueur</value>
+		</message>
+		<message>
+			<code>COORD__CANNOT_DISPLAY_PLAYER_COORDINATES</code>
+			<value>La command ./coord ne doit pas être exécutée depuis la console du serveur</value>
+		</message>
+		<message>
+			<code>COORD__PLAYER_TO_ITSELF_COORD</code>
+			<value>Vos coordonnées: %s</value>
+		</message>
+		<message>
+			<code>COORD__PLAYER_TO_TEAMMATES_COORD</code>
+			<value>Mes coordonnées sont %s</value>
+		</message>
+		<message>
+			<code>GPS__EXPLANATION</code>
+			<value>Pour ajouter ou supprimer un GPS du scoreboard d'un joueur</value>
+		</message>
+		<message>
+			<code>GPS__CANNOT_DISPLAY_PLAYER_COORDINATES</code>
+			<value>la command /gps ne doit pas être exécutée depuis la console du serveur</value>
+		</message>
+		<message>
+			<code>GPS__ADD__EXPLANATION</code>
+			<value>Pour ajouter dans le scoreboard d'un joueur une flèche indiquant une direction à suivre</value>
+		</message>
+		<message>
+			<code>GPS__DESTINATION_NAME__COMPLETION</code>
+			<value>&lt;nomDestination&gt;</value>
+		</message>
+		<message>
+			<code>GPS__ADD__DESTINATION_IS_MISSING</code>
+			<value>Impossible de créer un nouveau GPS, le nom de la destination est manquant</value>
+		</message>
+		<message>
+			<code>GPS__ADD__X_COORDINATE_IS_MISSING</code>
+			<value>Impossible de créer un nouveau GPS, la coordonnée X est manquante</value>
+		</message>
+		<message>
+			<code>GPS__ADD__X_COORDINATE_BAD_FORMAT</code>
+			<value>Impossible de créer un nouveau GPS, la coordonnée X a un mauvais format, une valeur entière est attendue</value>
+		</message>
+		<message>
+			<code>GPS__ADD__Z_COORDINATE_IS_MISSING</code>
+			<value>Impossible de créer un nouveau GPS, la coordonnée Z est manquante</value>
+		</message>
+		<message>
+			<code>GPS__ADD__Z_COORDINATE_BAD_FORMAT</code>
+			<value>Impossible de créer un nouveau GPS, la coordonnée Z a un mauvais format, une valeur entière est attendue</value>
+		</message>
+		<message>
+			<code>GPS__ADD__NO_RUNNING_GAME</code>
+			<value>Impossible de créer un nouveau GPS, il n'y a pas de partie en cours</value>
+		</message>
+		<message>
+			<code>GPS__ADD__GPS_ALREADY_REGISTERED</code>
+			<value>Impossible de créer un nouveau GPS menant à %s, le GPS existe déjà</value>
+		</message>
+		<message>
+			<code>GPS__ADD__GPS_CREATED</code>
+			<value>Le GPS menant à %s (X=%s, Z=%s) a été créé</value>
+		</message>
+		<message>
+			<code>GPS__PLAYER_ARRIVED</code>
+			<value>Vous êtes arrivé à %s</value>
+		</message>
+		<message>
+			<code>GPS__REMOVE__EXPLANATION</code>
+			<value>Pour arrêter et supprimer un GPS du scoreboard d'un joueur</value>
+		</message>
+		<message>
+			<code>GPS__REMOVE__GPS_NOT_FOUND</code>
+			<value>Impossible de supprimer un GPS associaté à la destination %s, le GPS n'existe pas</value>
+		</message>
+		<message>
+			<code>GPS__REMOVE__NO_GPS_TO_REMOVE</code>
+			<value>Aucun GPS n'a été supprimé</value>
+		</message>
+		<message>
+			<code>GPS__REMOVE__ONE_GPS_TO_REMOVE</code>
+			<value>Le GPS %s a été supprimé</value>
+		</message>
+		<message>
+			<code>GPS__REMOVE__SEVERAL_GPS_TO_REMOVE</code>
+			<value>Les GPS %s ont été supprimé</value>
+		</message>
+	</messages>
+</dictionary>

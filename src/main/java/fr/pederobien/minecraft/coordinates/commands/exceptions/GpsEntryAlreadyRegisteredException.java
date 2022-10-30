@@ -1,21 +1,23 @@
 package fr.pederobien.minecraft.coordinates.commands.exceptions;
 
-import fr.pederobien.minecraft.coordinates.commands.gps.GpsEntry;
-import fr.pederobien.minecraftgameplateform.exceptions.SimpleMessageException;
-
-public class GpsEntryAlreadyRegisteredException extends SimpleMessageException {
+public class GpsEntryAlreadyRegisteredException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
-	private GpsEntry gps;
+	private String destination;
 
-	public GpsEntryAlreadyRegisteredException(GpsEntry gps) {
-		super("The gps " + gps.getDestinationName() + " is already registered");
-		this.gps = gps;
+	/**
+	 * Creates an exception thrown when a GPS is already registered for a destination.
+	 * 
+	 * @param destination The already registered destination.
+	 */
+	public GpsEntryAlreadyRegisteredException(String destination) {
+		super(String.format("The gps %s is already registered", destination));
+		this.destination = destination;
 	}
 
 	/**
-	 * @return The already registered gps entry.
+	 * @return The destination associated to this exception.
 	 */
-	public GpsEntry getGps() {
-		return gps;
+	public String getDestination() {
+		return destination;
 	}
 }

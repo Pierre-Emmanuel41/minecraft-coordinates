@@ -1,20 +1,23 @@
 package fr.pederobien.minecraft.coordinates.commands.exceptions;
 
-import fr.pederobien.minecraftgameplateform.exceptions.SimpleMessageException;
-
-public class GpsEntryNotRegisteredException extends SimpleMessageException {
+public class GpsEntryNotRegisteredException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
-	private String destinationName;
+	private String destination;
 
-	public GpsEntryNotRegisteredException(String destinationName) {
-		super("The gps " + destinationName + " is not registered");
-		this.destinationName = destinationName;
+	/**
+	 * Creates an exception thrown when a GPS is already registered for a destination.
+	 * 
+	 * @param destination The already registered destination.
+	 */
+	public GpsEntryNotRegisteredException(String destination) {
+		super(String.format("There is no gps leading to %s", destination));
+		this.destination = destination;
 	}
 
 	/**
-	 * @return The not registered gps entry name.
+	 * @return The destination associated to this exception.
 	 */
-	public String getDestinationName() {
-		return destinationName;
+	public String getDestination() {
+		return destination;
 	}
 }

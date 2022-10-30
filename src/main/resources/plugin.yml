@@ -1,8 +1,8 @@
-main: fr.pederobien.minecraftcoordinates.CoordinatesPlugin
+main: fr.pederobien.minecraft.coordinates.CoordinatesPlugin
 name: minecraft-coordinates
 version: 1.0-SNAPSHOT
 api-version: 1.13
-depend: [minecraft-chat]
+depend: [minecraft-platform]
 
 description:
 commands:

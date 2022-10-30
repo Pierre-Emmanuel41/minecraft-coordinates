@@ -1,4 +1,4 @@
-package fr.pederobien.minecraft.coordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -40,12 +40,11 @@ public class GpsMap {
 			gps = new HashMap<String, GpsEntry>();
 			entries.put(player, gps);
 		} else {
-			GpsEntry gpsEntry = gps.get(entry.getDestinationName());
-			if (gpsEntry != null) {
-				throw new GpsEntryAlreadyRegisteredException(entry);
-			}
+			GpsEntry gpsEntry = gps.get(entry.getDestination());
+			if (gpsEntry != null)
+				throw new GpsEntryAlreadyRegisteredException(entry.getDestination());
 		}
-		gps.put(entry.getDestinationName(), entry);
+		gps.put(entry.getDestination(), entry);
 		return gps;
 	}
 
