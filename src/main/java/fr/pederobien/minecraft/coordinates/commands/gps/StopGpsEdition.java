@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import java.util.List;
 import java.util.Map;
@@ -9,8 +9,8 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
-import fr.pederobien.minecraftcoordinates.commands.exceptions.GpsEntryNotRegisteredException;
+import fr.pederobien.minecraft.coordinates.commands.ECoordinatesMessageCode;
+import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryNotRegisteredException;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;
 
 public class StopGpsEdition extends AbstractSimpleMapEdition {

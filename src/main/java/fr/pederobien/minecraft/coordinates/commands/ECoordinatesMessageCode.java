@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands;
+package fr.pederobien.minecraft.coordinates.commands;
 
 import fr.pederobien.minecraftdictionary.impl.Permission;
 import fr.pederobien.minecraftdictionary.interfaces.IMinecraftMessageCode;

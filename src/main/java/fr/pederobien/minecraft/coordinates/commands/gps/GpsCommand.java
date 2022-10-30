@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import org.bukkit.plugin.java.JavaPlugin;
 

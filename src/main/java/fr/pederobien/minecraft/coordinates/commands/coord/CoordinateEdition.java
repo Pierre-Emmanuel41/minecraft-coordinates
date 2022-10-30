@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.coord;
+package fr.pederobien.minecraft.coordinates.commands.coord;
 
 import java.util.Optional;
 
@@ -7,7 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
+import fr.pederobien.minecraft.coordinates.commands.ECoordinatesMessageCode;
 import fr.pederobien.minecraftdevelopmenttoolkit.utils.DisplayHelper;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;
 import fr.pederobien.minecraftgameplateform.interfaces.element.IGameConfiguration;

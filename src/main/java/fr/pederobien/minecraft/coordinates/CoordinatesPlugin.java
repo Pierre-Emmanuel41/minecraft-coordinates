@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates;
+package fr.pederobien.minecraft.coordinates;
 
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
@@ -7,8 +7,8 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import fr.pederobien.dictionary.interfaces.IDictionaryParser;
-import fr.pederobien.minecraftcoordinates.commands.coord.CoordinatesCommand;
-import fr.pederobien.minecraftcoordinates.commands.gps.GpsCommand;
+import fr.pederobien.minecraft.coordinates.commands.coord.CoordinatesCommand;
+import fr.pederobien.minecraft.coordinates.commands.gps.GpsCommand;
 import fr.pederobien.minecraftgameplateform.utils.Plateform;
 
 public class CoordinatesPlugin extends JavaPlugin {

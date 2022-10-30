@@ -1,11 +1,11 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import java.util.List;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
-import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
+import fr.pederobien.minecraft.coordinates.commands.ECoordinatesMessageCode;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;
 import fr.pederobien.minecraftgameplateform.utils.Plateform;
 import fr.pederobien.minecraftmanagers.EColor;

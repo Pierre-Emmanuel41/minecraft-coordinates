@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +9,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftcoordinates.CoordinatesPlugin;
-import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
-import fr.pederobien.minecraftcoordinates.commands.exceptions.GpsEntryAlreadyRegisteredException;
+import fr.pederobien.minecraft.coordinates.CoordinatesPlugin;
+import fr.pederobien.minecraft.coordinates.commands.ECoordinatesMessageCode;
+import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryAlreadyRegisteredException;
 import fr.pederobien.minecraftdictionary.impl.Permission;
 import fr.pederobien.minecraftgameplateform.dictionary.ECommonMessageCode;
 import fr.pederobien.minecraftgameplateform.impl.editions.AbstractSimpleMapEdition;

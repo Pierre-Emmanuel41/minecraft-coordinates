@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.exceptions;
+package fr.pederobien.minecraft.coordinates.commands.exceptions;
 
 import fr.pederobien.minecraftgameplateform.exceptions.SimpleMessageException;
 

@@ -1,4 +1,4 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -6,8 +6,8 @@ import java.util.Map;
 
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftcoordinates.commands.exceptions.GpsEntryAlreadyRegisteredException;
-import fr.pederobien.minecraftcoordinates.commands.exceptions.GpsEntryNotRegisteredException;
+import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryAlreadyRegisteredException;
+import fr.pederobien.minecraft.coordinates.commands.exceptions.GpsEntryNotRegisteredException;
 
 public class GpsMap {
 	private Map<Player, Map<String, GpsEntry>> entries;

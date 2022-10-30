@@ -1,9 +1,9 @@
-package fr.pederobien.minecraftcoordinates.commands.gps;
+package fr.pederobien.minecraft.coordinates.commands.gps;
 
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import fr.pederobien.minecraftcoordinates.commands.ECoordinatesMessageCode;
+import fr.pederobien.minecraft.coordinates.commands.ECoordinatesMessageCode;
 import fr.pederobien.minecraftdictionary.interfaces.IMinecraftMessageCode;
 import fr.pederobien.minecraftgameplateform.entries.simple.OrientationEntry;
 import fr.pederobien.minecraftgameplateform.interfaces.editions.IPlateformCodeSender;
