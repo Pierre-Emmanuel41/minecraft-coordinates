@@ -28,7 +28,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 	 * Creates a node in order to add a GPS to the score boards of a player.
 	 */
 	protected GpsAddNode() {
-		super("add", ECoordinatesMessageCode.GPS__ADD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
+		super("add", ECoordinatesCode.GPS__ADD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override
@@ -38,7 +38,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 
 		switch (args.length) {
 		case 1:
-			return asList(getMessage(sender, ECoordinatesMessageCode.GPS__DESTINATION_NAME__COMPLETION));
+			return asList(getMessage(sender, ECoordinatesCode.GPS__DESTINATION_NAME__COMPLETION));
 		case 2:
 			Map<String, GpsEntry> playerGps = GpsMap.getInstance().get((Player) sender);
 			Predicate<String> isDestinationValid = destination -> playerGps == null || playerGps.get(destination) == null;
@@ -53,7 +53,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
 			return false;
 		}
 
@@ -63,7 +63,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 		try {
 			destination = args[0];
 		} catch (IndexOutOfBoundsException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__DESTINATION_IS_MISSING).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__DESTINATION_IS_MISSING).build());
 			return false;
 		}
 
@@ -71,10 +71,10 @@ public class GpsAddNode extends MinecraftCodeNode {
 		try {
 			x = getInt(args[1]);
 		} catch (IndexOutOfBoundsException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__X_COORDINATE_IS_MISSING).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__X_COORDINATE_IS_MISSING).build());
 			return false;
 		} catch (NumberFormatException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__X_COORDINATE_BAD_FORMAT).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__X_COORDINATE_BAD_FORMAT).build());
 			return false;
 		}
 
@@ -82,10 +82,10 @@ public class GpsAddNode extends MinecraftCodeNode {
 		try {
 			z = getInt(args[1]);
 		} catch (IndexOutOfBoundsException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__Z_COORDINATE_IS_MISSING).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__Z_COORDINATE_IS_MISSING).build());
 			return false;
 		} catch (NumberFormatException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__Z_COORDINATE_BAD_FORMAT).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__Z_COORDINATE_BAD_FORMAT).build());
 			return false;
 		}
 
@@ -99,7 +99,7 @@ public class GpsAddNode extends MinecraftCodeNode {
 
 			Platform platform = Platform.get(player);
 			if (platform == null) {
-				send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__NO_RUNNING_GAME).build());
+				send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__NO_RUNNING_GAME).build());
 				return false;
 			}
 
@@ -113,11 +113,11 @@ public class GpsAddNode extends MinecraftCodeNode {
 				platform.getObjectiveUpdater().register(objective);
 			}
 		} catch (GpsEntryAlreadyRegisteredException e) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__ADD__GPS_ALREADY_REGISTERED, e.getDestination()));
+			send(eventBuilder(sender, ECoordinatesCode.GPS__ADD__GPS_ALREADY_REGISTERED, e.getDestination()));
 			return false;
 		}
 
-		sendSuccessful(sender, ECoordinatesMessageCode.GPS__ADD__GPS_CREATED, destination, x, z);
+		sendSuccessful(sender, ECoordinatesCode.GPS__ADD__GPS_CREATED, destination, x, z);
 		return true;
 	}
 }

@@ -58,7 +58,7 @@ public class GpsEntry extends OrientationEntry {
 			if (!(WorldManager.getSquaredDistance2D(getPlayer().getLocation(), getBlock().getLocation()) < 10))
 				return;
 
-			sendSuccessful(getObjective().getPlayer(), ECoordinatesMessageCode.GPS__PLAYER_ARRIVED, EColor.DARK_GREEN.getInColor(destination));
+			sendSuccessful(getObjective().getPlayer(), ECoordinatesCode.GPS__PLAYER_ARRIVED, EColor.DARK_GREEN.getInColor(destination));
 			GpsMap.getInstance().remove(getPlayer(), destination);
 			stop();
 		}

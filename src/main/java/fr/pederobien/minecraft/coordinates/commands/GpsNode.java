@@ -10,7 +10,7 @@ public class GpsNode extends MinecraftCodeRootNode {
 	 * Creates a node in order to add or remove GPS from player's scoreboards.
 	 */
 	public GpsNode() {
-		super("gps", ECoordinatesMessageCode.GPS__EXPLANATION, () -> true);
+		super("gps", ECoordinatesCode.GPS__EXPLANATION, () -> true);
 
 		add(addNode = new GpsAddNode());
 		add(removeNode = new GpsRemoveNode());

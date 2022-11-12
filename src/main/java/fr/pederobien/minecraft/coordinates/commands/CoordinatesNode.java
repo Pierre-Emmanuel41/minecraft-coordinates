@@ -21,7 +21,7 @@ public class CoordinatesNode extends MinecraftCodeRootNode {
 	 * Creates a node in order to display the coordinates the player running this command.
 	 */
 	public CoordinatesNode() {
-		super("coord", ECoordinatesMessageCode.COORD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
+		super("coord", ECoordinatesCode.COORD__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override
@@ -32,7 +32,7 @@ public class CoordinatesNode extends MinecraftCodeRootNode {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.COORD__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
+			send(eventBuilder(sender, ECoordinatesCode.COORD__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
 			return false;
 		}
 
@@ -44,17 +44,17 @@ public class CoordinatesNode extends MinecraftCodeRootNode {
 		String playerCoords = DisplayHelper.toString(display, false, true);
 
 		if (!(game instanceof ITeamConfigurable)) {
-			sendSuccessful(sender, ECoordinatesMessageCode.COORD__PLAYER_TO_ITSELF_COORD, playerCoords);
+			sendSuccessful(sender, ECoordinatesCode.COORD__PLAYER_TO_ITSELF_COORD, playerCoords);
 			return true;
 		}
 
 		Optional<ITeam> optTeam = ((ITeamConfigurable) game).getTeams().getTeam(player);
 		if (!optTeam.isPresent()) {
-			sendSuccessful(sender, ECoordinatesMessageCode.COORD__PLAYER_TO_ITSELF_COORD, playerCoords);
+			sendSuccessful(sender, ECoordinatesCode.COORD__PLAYER_TO_ITSELF_COORD, playerCoords);
 			return true;
 		}
 
-		optTeam.get().sendMessage(player, ECoordinatesMessageCode.COORD__PLAYER_TO_TEAMMATES_COORD, playerCoords);
+		optTeam.get().sendMessage(player, ECoordinatesCode.COORD__PLAYER_TO_TEAMMATES_COORD, playerCoords);
 		return true;
 	}
 }

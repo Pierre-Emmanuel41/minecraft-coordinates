@@ -4,7 +4,7 @@ import fr.pederobien.minecraft.dictionary.impl.PlayerGroup;
 import fr.pederobien.minecraft.dictionary.interfaces.IMinecraftCode;
 import fr.pederobien.minecraft.dictionary.interfaces.IPlayerGroup;
 
-public enum ECoordinatesMessageCode implements IMinecraftCode {
+public enum ECoordinatesCode implements IMinecraftCode {
 	// Code for the "coord" command ---------------------------------------------------------------
 	COORD__EXPLANATION,
 
@@ -73,16 +73,16 @@ public enum ECoordinatesMessageCode implements IMinecraftCode {
 
 	private IPlayerGroup group;
 
-	private ECoordinatesMessageCode() {
+	private ECoordinatesCode() {
 		this(PlayerGroup.OPERATORS);
 	}
 
-	private ECoordinatesMessageCode(IPlayerGroup group) {
+	private ECoordinatesCode(IPlayerGroup group) {
 		this.group = group;
 	}
 
 	@Override
-	public String value() {
+	public String getCode() {
 		return name();
 	}
 
@@ -98,6 +98,6 @@ public enum ECoordinatesMessageCode implements IMinecraftCode {
 
 	@Override
 	public String toString() {
-		return String.format("value=%s,group=%s", value(), getGroup());
+		return String.format("value=%s,group=%s", getCode(), getGroup());
 	}
 }

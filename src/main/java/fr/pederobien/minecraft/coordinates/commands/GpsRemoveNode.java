@@ -17,7 +17,7 @@ public class GpsRemoveNode extends MinecraftCodeNode {
 	 * Creates a node in order to remove a GPS from the score board of a player.
 	 */
 	protected GpsRemoveNode() {
-		super("remove", ECoordinatesMessageCode.GPS__REMOVE__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
+		super("remove", ECoordinatesCode.GPS__REMOVE__EXPLANATION, () -> GamePlatformPlugin.getGameTree().getGame() != null);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class GpsRemoveNode extends MinecraftCodeNode {
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
-			send(eventBuilder(sender, ECoordinatesMessageCode.GPS__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
+			send(eventBuilder(sender, ECoordinatesCode.GPS__CANNOT_DISPLAY_PLAYER_COORDINATES).build());
 			return false;
 		}
 
@@ -43,7 +43,7 @@ public class GpsRemoveNode extends MinecraftCodeNode {
 			try {
 				destinations.add(GpsMap.getInstance().remove(player, destination));
 			} catch (GpsEntryNotRegisteredException e) {
-				send(eventBuilder(sender, ECoordinatesMessageCode.GPS__REMOVE__GPS_NOT_FOUND, e.getDestination()));
+				send(eventBuilder(sender, ECoordinatesCode.GPS__REMOVE__GPS_NOT_FOUND, e.getDestination()));
 				return false;
 			}
 		}
@@ -54,13 +54,13 @@ public class GpsRemoveNode extends MinecraftCodeNode {
 
 		switch (destinations.size()) {
 		case 0:
-			sendSuccessful(sender, ECoordinatesMessageCode.GPS__REMOVE__NO_GPS_TO_REMOVE);
+			sendSuccessful(sender, ECoordinatesCode.GPS__REMOVE__NO_GPS_TO_REMOVE);
 			return true;
 		case 1:
-			sendSuccessful(sender, ECoordinatesMessageCode.GPS__REMOVE__ONE_GPS_TO_REMOVE, destinationNames);
+			sendSuccessful(sender, ECoordinatesCode.GPS__REMOVE__ONE_GPS_TO_REMOVE, destinationNames);
 			return true;
 		default:
-			sendSuccessful(sender, ECoordinatesMessageCode.GPS__REMOVE__SEVERAL_GPS_TO_REMOVE, destinationNames);
+			sendSuccessful(sender, ECoordinatesCode.GPS__REMOVE__SEVERAL_GPS_TO_REMOVE, destinationNames);
 			return true;
 		}
 	}
